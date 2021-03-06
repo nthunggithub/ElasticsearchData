@@ -24,5 +24,5 @@ volumes:
     driver: local
     driver_opts:
       type: 'none'
-      device: '${PWD}/data'
+      device: '/home/phamdangdangkhoa2802/ElasticsearchData/data'
       o: 'bind'
