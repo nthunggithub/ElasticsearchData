@@ -17,10 +17,10 @@ services:
     ports:
       - "9200:9200"
     volumes:
-      - esdata:/usr/share/elasticsearch/data
+      - .\data:/usr/share/elasticsearch/data
 
 volumes:
-  esdata:
+  data:
     driver: local
     driver_opts:
       type: 'none'
