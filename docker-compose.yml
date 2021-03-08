@@ -19,7 +19,7 @@ services:
       - "9200:9200"
     volumes:
       - data:/usr/share/elasticsearch/data
-      - ./config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - dataconfig:/usr/share/elasticsearch/config/elasticsearch.yml
 
 volumes:
   data:
@@ -27,4 +27,10 @@ volumes:
     driver_opts:
       type: 'none'
       device: '/home/phamdangdangkhoa2802/ElasticsearchData/data'
+      o: 'bind'
+  dataconfig:
+    driver: local
+    driver_opts:
+      type: 'none'
+      device: '/home/phamdangdangkhoa2802/ElasticsearchData/config/elasticsearch.yml'
       o: 'bind'
