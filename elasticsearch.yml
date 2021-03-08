@@ -87,5 +87,12 @@
 #
 #action.destructive_requires_name: true
 
+network.host: 0.0.0.0
+node.name: node-1
+node.master: true
+node.data: true
+cluster.name: my-application
+http.port: 9200
+discovery.zen.ping.unicast.hosts: ["localhost:9201", "localhost:9202"]
 http.cors.enabled: true
-http.cors.allow-origin: /https?:\/\/(localhost)?(127.0.0.1)?(:[0-9]+)?/
+http.cors.allow-origin: "*"
