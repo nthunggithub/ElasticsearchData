@@ -19,7 +19,7 @@ services:
       - "9200:9200"
     volumes:
       - data:/usr/share/elasticsearch/data
-      - /home/phamdangdangkhoa2802/ElasticsearchData/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ./config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
 
 volumes:
   data:
